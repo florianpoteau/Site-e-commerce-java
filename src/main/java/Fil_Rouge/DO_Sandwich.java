@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Entity
 @Table ( name = "produit")
 
- class Sandwich implements Serializable{
+ class DO_Sandwich implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id

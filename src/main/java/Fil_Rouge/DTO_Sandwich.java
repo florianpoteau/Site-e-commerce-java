@@ -1,6 +1,6 @@
 package Fil_Rouge;
 
-public class SandwichDto {
+public class DTO_Sandwich {
 	
 	private int id;
 	private int noproduit;
@@ -12,19 +12,6 @@ public class SandwichDto {
 	private String produit5;
 	private float prix;
 	private int quantité;
-	
-	public SandwichDto (int id, int noproduit, String nom, String produit1, String produit2, String produit3, String produit4, String produit5, float prix, int quantité) {
-		this.id = id;
-		this.noproduit = noproduit;
-		this.nom = nom;
-		this.produit1 = produit1;
-		this.produit2 = produit2;
-		this.produit3 = produit3;
-		this.produit4 = produit4;
-		this.produit5 = produit5;
-		this.prix = prix;
-		this.quantité = quantité;
-	}
 	
 	/**
 	 * @return the id

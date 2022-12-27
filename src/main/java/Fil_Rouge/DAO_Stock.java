@@ -14,7 +14,7 @@ import org.springframework.data.repository.RepositoryDefinition;
 
 
 
-public class Stock implements InterfaceDAO {
+public class DAO_Stock implements InterfaceDAO {
 
 	private static EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("sandwich");
 		
@@ -26,17 +26,17 @@ public class Stock implements InterfaceDAO {
 		try {
 			et = em.getTransaction();
 			et.begin();
-			Sandwich sandwich = new Sandwich();
-			sandwich.setId(id);
-			sandwich.setNoproduit(noproduit);
-			sandwich.setNom(nom);
-			sandwich.setProduit1(produit1);
-			sandwich.setProduit2(produit2);
-			sandwich.setProduit3(produit3);
-			sandwich.setProduit4(produit4);
-			sandwich.setProduit5(produit5);
-			sandwich.setPrix(prix);
-			em.persist(sandwich);
+			DO_Sandwich dO_Sandwich = new DO_Sandwich();
+			dO_Sandwich.setId(id);
+			dO_Sandwich.setNoproduit(noproduit);
+			dO_Sandwich.setNom(nom);
+			dO_Sandwich.setProduit1(produit1);
+			dO_Sandwich.setProduit2(produit2);
+			dO_Sandwich.setProduit3(produit3);
+			dO_Sandwich.setProduit4(produit4);
+			dO_Sandwich.setProduit5(produit5);
+			dO_Sandwich.setPrix(prix);
+			em.persist(dO_Sandwich);
 			et.commit();
 		}
 		catch(Exception ex){
@@ -56,12 +56,12 @@ public class Stock implements InterfaceDAO {
 		
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 		EntityTransaction et = null;
-		Sandwich sandwich = null;
+		DO_Sandwich dO_Sandwich = null;
 		try {
 			et = em.getTransaction();
 			et.begin();
-			sandwich = em.find(Sandwich.class, id);
-			em.remove(sandwich);
+			dO_Sandwich = em.find(DO_Sandwich.class, id);
+			em.remove(dO_Sandwich);
 			et.commit();
 		}
 		catch (Exception ex) {
@@ -80,9 +80,9 @@ public class Stock implements InterfaceDAO {
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 		String query = "SELECT s FROM Sandwich s WHERE s.id = :id";
 
-		TypedQuery<Sandwich> tq = em.createQuery(query, Sandwich.class);
+		TypedQuery<DO_Sandwich> tq = em.createQuery(query, DO_Sandwich.class);
 		tq.setParameter("id", id);
-		Sandwich util = null;
+		DO_Sandwich util = null;
 		try {
 			util = tq.getSingleResult();
 			System.out.println(util.getNom() + " " + util.getProduit1() + " " + util.getProduit2() + " " + util.getProduit3() + " " + util.getProduit4() + " " + util.getProduit5() + " " + util.getPrix());
@@ -99,8 +99,8 @@ public class Stock implements InterfaceDAO {
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 		String strQuery = "SELECT s FROM Sandwich s WHERE s.id IS NOT NULL";
 		
-		TypedQuery<Sandwich> tq = em.createQuery(strQuery, Sandwich.class);
-		List<Sandwich> utils;
+		TypedQuery<DO_Sandwich> tq = em.createQuery(strQuery, DO_Sandwich.class);
+		List<DO_Sandwich> utils;
 		try {
 			utils = tq.getResultList();
 			utils.forEach(Sandwich->System.out.println( Sandwich.getNom() + " " + Sandwich.getProduit1() + " " + Sandwich.getProduit2() + " " + Sandwich.getProduit3() + " " + Sandwich.getProduit4() + " " + Sandwich.getProduit5() + " " + Sandwich.getPrix()));
@@ -119,9 +119,9 @@ public class Stock implements InterfaceDAO {
 	public void dateAchat (final int id) {
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 		String query = "SELECT s FROM Sandwich s WHERE s.id = :id";
-		TypedQuery<Sandwich> tq = em.createQuery(query, Sandwich.class);
+		TypedQuery<DO_Sandwich> tq = em.createQuery(query, DO_Sandwich.class);
 		tq.setParameter("id", id);
-		Sandwich util = null;
+		DO_Sandwich util = null;
 		try {
 			util = tq.getSingleResult();
 			
