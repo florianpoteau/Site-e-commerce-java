@@ -3,6 +3,7 @@ package Fil_Rouge;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
 import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -10,14 +11,15 @@ import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import org.springframework.data.repository.RepositoryDefinition;
+import org.springframework.stereotype.Component;
 
-
+@Component
 
 public class DAO_Stock implements InterfaceDAO {
-
+	
 	private static EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("sandwich");
 		
+	
 	public void ajouterproduit (final int id, final int noproduit, final String nom, final String produit1, final String produit2, final String produit3, final String produit4, final String produit5, final float prix) {
 		
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
@@ -94,7 +96,7 @@ public class DAO_Stock implements InterfaceDAO {
 	}
 	
 	
-	public void getsandwichs () {
+	public List<DO_Sandwich> getsandwichs () {
 		
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 		String strQuery = "SELECT s FROM Sandwich s WHERE s.id IS NOT NULL";
@@ -114,6 +116,7 @@ public class DAO_Stock implements InterfaceDAO {
 			em.close();
 			ENTITY_MANAGER_FACTORY.close();
 		}
+		return tq.getResultList();
 	}
 	
 	public void dateAchat (final int id) {

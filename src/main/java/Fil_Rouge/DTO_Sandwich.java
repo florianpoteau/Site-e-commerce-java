@@ -11,7 +11,7 @@ public class DTO_Sandwich {
 	private String produit4;
 	private String produit5;
 	private float prix;
-	private int quantité;
+	
 	
 	/**
 	 * @return the id
@@ -120,18 +120,6 @@ public class DTO_Sandwich {
 	 */
 	public void setPrix(float prix) {
 		this.prix = prix;
-	}
-	/**
-	 * @return the quantité
-	 */
-	public int getQuantité() {
-		return quantité;
-	}
-	/**
-	 * @param quantité the quantité to set
-	 */
-	public void setQuantité(int quantité) {
-		this.quantité = quantité;
 	}
 
 }

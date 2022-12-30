@@ -8,11 +8,9 @@ import Fil_Rouge.DO_Sandwich;
 public interface Convert_Sandwich {
 
 		DTO_Sandwich ConvertProduitDTO(DO_Sandwich produit);
-		DO_Sandwich ConvertProduit(DTO_Sandwich produitDTO);
-		
-		List<DTO_Sandwich> findAll();
+		 public DO_Sandwich ConvertProduits(DTO_Sandwich produitDTO);
 		void createProduit(DTO_Sandwich produitDTO);
-		DO_Sandwich getById(long id);
+		public List<DTO_Sandwich> findAll();
 	}
 	
 	
