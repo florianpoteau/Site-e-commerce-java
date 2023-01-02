@@ -11,11 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-
 public class ProduitController {
 	
 	@Autowired
-	
 	private Convert_Sandwich interface_sandwich;
 	
 	@Autowired
@@ -23,23 +21,8 @@ public class ProduitController {
 	
 	@GetMapping("/")
     public String list(Model model) {
-		List<DTO_Sandwich> produits = ProduitServiceimpl.findAll();
+		List<DTO_Sandwich> produits = interface_sandwich.findAll();
         model.addAttribute("produits", produits);
-        HttpSession session = request.getSession();
-	      Panier panier = (Panier) session.getAttribute("panier");
-	      if (panier == null) {
-	        panier = new Panier();
-	        session.setAttribute("panier", panier);
-	      }
-	      model.addAttribute("panier", panier);
-	      // Récupère le panier de la session et envoie son nombre d'éléments à la vue
-	      if (panier != null) {
-	        model.addAttribute("panierIcone", panier.getProduits().size());
-	      } else {
-	        model.addAttribute("panierIcone", 0);
-	      }
-	      model.addAttribute("prixTotal", panier.prixTotal());
-	
         return "index";
       }
 	

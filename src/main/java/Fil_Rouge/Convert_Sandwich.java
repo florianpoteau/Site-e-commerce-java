@@ -4,6 +4,7 @@ import java.util.List;
 
 import Fil_Rouge.DAO_Stock;
 import Fil_Rouge.DO_Sandwich;
+import javax.servlet.http.HttpSession;
 
 public interface Convert_Sandwich {
 

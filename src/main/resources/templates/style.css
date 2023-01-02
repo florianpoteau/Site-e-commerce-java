@@ -1,0 +1,153 @@
+
+body {
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+  }
+  nav {
+    width: 100%;
+    position:fixed;
+    padding: 10px;
+    background-attachment: fixed;
+    opacity: .7;
+    background-color: #cb7441;
+  }
+  .nav-menu{
+    display:flex;
+    align-content: space-between;
+  }
+   img  {
+    border-radius: 10px;
+    height:50px;
+  }
+  .nav-item {
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: #f5efef;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  .nav-item:hover {
+    border-radius: 10px;
+    background-color:rgb(35, 31, 31);
+    color: white;
+  }
+  
+  .menu{
+    padding:10px;
+    background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
+  }
+  .menu-header{
+    text-align:center;
+  }
+  #card-grid{
+
+      padding: 6% 12%;
+      display: flex;
+      flex-wrap: wrap;
+      
+  }
+  
+  .card{
+      width: calc(40% - 20%);
+      box-shadow: 10px 12px 9px rgb(2, 10, 120);
+      border-radius: 6px;
+      margin: 8px;
+      background-color: rgb(210, 104, 65);
+      
+  }
+  
+  .card:hover{
+      animation: bounce 1s linear;
+  }
+  @keyframes bounce{
+      20%,50%,80%,to{
+          transform: translateY(0);
+      }
+      40%{
+          transform: translateY(-30px);
+      }
+  }
+  .thumbnail{
+      width: 100%;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      height: 150px;
+  }
+  .card a{
+      text-decoration: none;
+      
+  }
+  
+  .card-label{
+      margin: 0;
+      font-size:20px;  
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-bottom:0px;
+      text-align:center;
+  }
+  
+  .price{
+    color: antiquewhite;
+    font-size:14px;
+    font-style: oblique;
+    text-align:center;
+  }
+  @media(max-width: 600px){
+      #card-grid{
+          padding: 16px;
+      }
+      .card{
+          width: calc(50% - 14px);
+          margin: 7px;
+          height: 210px;
+      }
+      .card-label{
+          font-size: small;
+          margin: 0;
+          padding: 7px;
+          letter-spacing: 0.5px;    
+      }
+  }
+
+
+/* creartion style button */
+button {
+  margin-bottom: 5%;
+  margin-left: 75%;
+  text-decoration: none;
+  padding: 5px;
+  font-family: arial;
+  font-size: em;
+  color: #FFFFFF;
+  background-color: #1f497d;
+  border-radius: 6px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border: 2px solid #f5efef;
+  box-shadow: 3px 3px 12px #444444;
+  -webkit-box-shadow: 3px 3px 8px #444444;
+  -moz-box-shadow: 3px 3px 8px #444444;
+  }
+  
+  
+  button:hover {
+  padding: 10px;
+  background-color: #f79646;
+  border-radius: 6px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  box-shadow: 1px 1px 4px #444444;
+  -webkit-box-shadow: 3px 3px 12px #444444;
+  -moz-box-shadow: 3px 3px 12px #444444;
+  }
+  footer{
+    color: #f5efef;
+    background-color: #1f497d;
+    display: flex;
+    justify-content: space-around;
+  }
+  .icon{
+    margin-top: -30px;
+    margin-left: 90%;
+  }

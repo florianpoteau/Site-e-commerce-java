@@ -48,10 +48,7 @@ public class DAO_Stock implements InterfaceDAO {
 			ex.printStackTrace();
 		}
 			
-			finally {
-				em.close();
-				ENTITY_MANAGER_FACTORY.close();
-			}
+			
 		}
 	
 	public void deletesandwich ( final int id) {
@@ -72,15 +69,12 @@ public class DAO_Stock implements InterfaceDAO {
 			}
 			ex.printStackTrace();
 		}
-		finally {
-			em.close();
-			ENTITY_MANAGER_FACTORY.close();
-		}
+		
 	}
 	
 	public void getsandwich(final int id) {
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-		String query = "SELECT s FROM Sandwich s WHERE s.id = :id";
+		String query = "SELECT s FROM DO_Sandwich s WHERE s.id = :id";
 
 		TypedQuery<DO_Sandwich> tq = em.createQuery(query, DO_Sandwich.class);
 		tq.setParameter("id", id);
@@ -90,16 +84,14 @@ public class DAO_Stock implements InterfaceDAO {
 			System.out.println(util.getNom() + " " + util.getProduit1() + " " + util.getProduit2() + " " + util.getProduit3() + " " + util.getProduit4() + " " + util.getProduit5() + " " + util.getPrix());
 		} catch (NoResultException ex) {
 			ex.printStackTrace();
-		} finally {
-			em.close();
-		}
+		} 
 	}
 	
 	
 	public List<DO_Sandwich> getsandwichs () {
 		
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-		String strQuery = "SELECT s FROM Sandwich s WHERE s.id IS NOT NULL";
+		String strQuery = "SELECT s FROM DO_Sandwich s WHERE s.id IS NOT NULL";
 		
 		TypedQuery<DO_Sandwich> tq = em.createQuery(strQuery, DO_Sandwich.class);
 		List<DO_Sandwich> utils;
@@ -112,16 +104,13 @@ public class DAO_Stock implements InterfaceDAO {
 			ex.printStackTrace();
 		}
 		
-		finally {
-			em.close();
-			ENTITY_MANAGER_FACTORY.close();
-		}
+		
 		return tq.getResultList();
 	}
 	
 	public void dateAchat (final int id) {
 		EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-		String query = "SELECT s FROM Sandwich s WHERE s.id = :id";
+		String query = "SELECT s FROM DO_Sandwich s WHERE s.id = :id";
 		TypedQuery<DO_Sandwich> tq = em.createQuery(query, DO_Sandwich.class);
 		tq.setParameter("id", id);
 		DO_Sandwich util = null;
@@ -144,11 +133,9 @@ public class DAO_Stock implements InterfaceDAO {
 			
 		} catch (NoResultException ex) {
 			ex.printStackTrace();
-		} finally {
-			em.close();
-		}
+		
 	}
 
-	
+	}
 	
 	}
