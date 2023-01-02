@@ -24,7 +24,8 @@ public class ProduitController {
 		List<DTO_Sandwich> produits = interface_sandwich.findAll();
         model.addAttribute("produits", produits);
         
-        return "Fast food restaurant intérieur, Orient CDB, Maseru, Lesotho Photo Stock - Alamy";
+        return "index";
+        
       }
 	
 	

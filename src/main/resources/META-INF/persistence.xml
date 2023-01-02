@@ -25,7 +25,7 @@ mapped to database tables. Database driver, location, userid and pw
             <!-- Username -->
             <property name="javax.persistence.jdbc.user" value="postgres" />
             <!-- Password -->
-            <property name="javax.persistence.jdbc.password" value="Beuvrages59" />
+            <property name="javax.persistence.jdbc.password" value="Amir" />
         </properties>
     </persistence-unit>
 </persistence>
