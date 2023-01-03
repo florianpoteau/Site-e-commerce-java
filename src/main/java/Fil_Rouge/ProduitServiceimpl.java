@@ -2,7 +2,6 @@ package Fil_Rouge;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,12 +46,23 @@ import org.springframework.stereotype.Service;
 		 @Override
 		 public void createProduit(DTO_Sandwich produitDTO) {
 		  DO_Sandwich produit = ConvertProduits(produitDTO);
-		  produitDAO.ajouterproduit(produit.getId(), produit.getNoproduit(), produit.getNom(), produit.getProduit1(), produit.getProduit2(), produit.getProduit3(), produit.getProduit4(), produit.getProduit5(), produit.getPrix());
+		  produitDAO.save(produit);
 			  }
+		 
+		 @Override
 
 		 public List<DTO_Sandwich> findAll() {
-			    List<DO_Sandwich> products = produitDAO.getsandwichs();
+			    List<DO_Sandwich> products = produitDAO.findAll();
 			    return products.stream().map(this::ConvertProduitDTO).collect(Collectors.toList());
+			  }
+		 
+		 @Override
+		 public DO_Sandwich getById(long id) {
+			 
+			return produitDAO.findById(id).orElse(null);
+			
+			 
+			   
 			  }
 		 
 

@@ -12,6 +12,7 @@ public interface Convert_Sandwich {
 		 public DO_Sandwich ConvertProduits(DTO_Sandwich produitDTO);
 		void createProduit(DTO_Sandwich produitDTO);
 		public List<DTO_Sandwich> findAll();
+		DO_Sandwich getById(long id);
 	}
 	
 	
