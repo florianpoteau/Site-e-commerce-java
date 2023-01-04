@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-
 @Entity
 @Table ( name = "produit")
 
@@ -17,7 +15,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 	
 	@Id
 	@Column(name = "id", unique = true)
-	private int id;
+	private long id;
 	
 	@Column ( name = "noproduit", nullable = false)
 	private int noproduit;
@@ -63,14 +61,14 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 	/**
 	 * @return the id
 	 */
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

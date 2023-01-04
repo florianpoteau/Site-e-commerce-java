@@ -23,7 +23,7 @@ public class ProduitController {
 	@GetMapping("/")
     public String list(Model model) {
 		List<DTO_Sandwich> produits = interface_sandwich.findAll();
-        model.addAttribute("produits", produits);
+        model.addAttribute("produit", produits);
         
         return "index";
       }

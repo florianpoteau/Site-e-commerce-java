@@ -2,7 +2,7 @@ package Fil_Rouge;
 
 public class DTO_Sandwich {
 	
-	private int id;
+	private long id;
 	private int noproduit;
 	private String nom;
 	private String produit1;
@@ -13,16 +13,17 @@ public class DTO_Sandwich {
 	private float prix;
 	
 	
+	
 	/**
 	 * @return the id
 	 */
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	/**
@@ -121,5 +122,9 @@ public class DTO_Sandwich {
 	public void setPrix(float prix) {
 		this.prix = prix;
 	}
+	
+	
+	
+	
 
 }

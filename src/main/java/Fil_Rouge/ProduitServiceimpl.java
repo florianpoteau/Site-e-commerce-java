@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 	@Service
 	public class ProduitServiceimpl implements Convert_Sandwich {
 		
-		 @Autowired
+		 @Autowired 
 		  private DAO_Stock produitDAO;
 		
 		 @Override
