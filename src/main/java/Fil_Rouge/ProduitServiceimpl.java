@@ -58,11 +58,8 @@ import org.springframework.stereotype.Service;
 		 
 		 @Override
 		 public DO_Sandwich getById(long id) {
-			 
 			return produitDAO.findById(id).orElse(null);
 			
-			 
-			   
 			  }
 		 
 
