@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 
 public interface DAO_Stock extends JpaRepository<DO_Sandwich, Long> {
-	
-	
 
+	
+	
 	}

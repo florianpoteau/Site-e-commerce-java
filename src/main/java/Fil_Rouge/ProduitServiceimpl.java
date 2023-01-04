@@ -56,11 +56,21 @@ import org.springframework.stereotype.Service;
 			    return products.stream().map(this::ConvertProduitDTO).collect(Collectors.toList());
 			  }
 		 
-		 @Override
 		 public DO_Sandwich getById(long id) {
 			return produitDAO.findById(id).orElse(null);
 			
 			  }
+		 
+		 @Override
+		 public void deleteById (long id) {
+			  produitDAO.deleteById(id);
+			}
+
+		
+
+		
+		 
+		 
 		 
 
 }

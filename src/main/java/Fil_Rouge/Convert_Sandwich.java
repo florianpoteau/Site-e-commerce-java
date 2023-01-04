@@ -13,6 +13,7 @@ public interface Convert_Sandwich {
 		void createProduit(DTO_Sandwich produitDTO);
 		List<DTO_Sandwich> findAll();
 		DO_Sandwich getById(long id);
+		public void deleteById (long id);
 	}
 	
 	

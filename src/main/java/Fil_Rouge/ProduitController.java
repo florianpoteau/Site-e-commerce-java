@@ -8,8 +8,12 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ProduitController {
@@ -42,6 +46,13 @@ public class ProduitController {
         model.addAttribute("produit8", produits8);
         return "index";
       }
+	
+	@PostMapping("/delete")
+	public String delete(@RequestParam("id")long id , Model model) {
+	    interface_sandwich.deleteById(id);
+	    model.addAttribute("message", "L'élément a été supprimé avec succès.");
+	    return "redirect:/";
+	}
 	
 	
 	
