@@ -58,7 +58,11 @@ public class ProduitController {
 	
 	@PostMapping ("/post")
 	public String deletebynom(@RequestParam("nosandwich")int nosandwich, Model model) {
-		
+		List<DO_Sandwich> sandwich = interface_sandwich.getByNosandwich(nosandwich);
+		if (sandwich == null) {
+			model.addAttribute("errorMessage", "Le produit n'est plus disponible dans le panier.");
+			return "error-page";
+		}
 		interface_sandwich.getByNosandwich(nosandwich);
 		model.addAttribute("message", "Le produit à été commandé avec succès.");
 		return "confirmation-page";
@@ -67,8 +71,7 @@ public class ProduitController {
 	@GetMapping ("/prix")
 	public String getPrix(@RequestParam("prix")int prix, Model model) {
 		List<DO_Sandwich> prixProduit = interface_sandwich.getByPrix(prix);
-		
-		
+		model.addAttribute("prixproduit", prixProduit);
 		return "index";
 		
 	}

@@ -65,6 +65,7 @@ import org.springframework.stereotype.Service;
 		 @Override
 		 public List<DO_Sandwich> getByPrix (int prix) {
 			 return produitDAO.findPrixSandwich(prix);
+			 
 		 }
 
 		
