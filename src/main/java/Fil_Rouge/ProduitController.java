@@ -2,9 +2,11 @@ package Fil_Rouge;
 
 import java.util.List;
 
+import javax.management.Query;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -52,6 +54,14 @@ public class ProduitController {
 	    interface_sandwich.deleteById(id);
 	    model.addAttribute("message", "L'élément a été supprimé avec succès.");
 	    return "redirect:/";
+	}
+	
+	@PostMapping ("/post")
+	public String deletebynom(@RequestParam("nosandwich")int nosandwich, Model model) {
+		
+		interface_sandwich.getByNosandwich(nosandwich);
+		model.addAttribute("message", "Le produit à été commandé avec succès.");
+		return "confirmation-page";
 	}
 	
 	

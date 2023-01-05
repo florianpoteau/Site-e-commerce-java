@@ -14,6 +14,7 @@ public interface Convert_Sandwich {
 		List<DTO_Sandwich> findAll();
 		DO_Sandwich getById(long id);
 		public void deleteById (long id);
+		List<DO_Sandwich> getByNosandwich (int nosandwich);
 	}
 	
 	

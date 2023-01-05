@@ -31,21 +31,29 @@
     <div class="card">
         <img class="thumbnail" src="/images/images8.jpeg">
         <h3 class="card-label">Burger</h3>
-        <h4 th:text="${produit1}"></h4>
-        <form th:action="@{/delete}" method="post">
+         <h4 th:text="${produit1}"></h4>
+         <form th:action="@{/post}" method="post">
+    <input type="hidden" name="nosandwich" value="1" />
+    <button type="submit">Add</button>
+    </form>
+         <!-- <form th:action="@{/delete}" method="post">
     <input type="hidden" name="id" value="1" />
     <button type="submit">Add</button>
-</form>
+</form> -->
     </div>
     
     <div class="card">
         <img class="thumbnail" src="/images/images1.jpeg">
         <h3 class="card-label">Sandwich jambon</h3>
         <h4 th:text="${produit2}"></h4>
-        <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="2" />
+        <form th:action="@{/post}" method="post">
+    <input type="hidden" name="nosandwich" value="2" />
     <button type="submit">Add</button>
-</form>
+    </form>
+        <!-- <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="nosandwich" value="2" />
+    <button type="submit">Add</button>
+</form> -->
 
     </div>
     
@@ -53,9 +61,12 @@
         <img class="thumbnail" src="/images/images2.jpeg">
         <h3 class="card-label">sandwich salad</h3>
         <h4 th:text="${produit3}"></h4>
-        <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="3" />
+        <form th:action="@{/post}" method="post">
+    <input type="hidden" name="nosandwich" value="3" />
     <button type="submit">Add</button>
+        <!-- <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="id" value="3" />
+    <button type="submit">Add</button> -->
 </form>
 
     </div>
@@ -64,9 +75,12 @@
         <img class="thumbnail" src="/images/images3.jpeg">
         <h3 class="card-label">sandwich thon</h3>
         <h4 th:text= "${produit4}"></h4>
-        <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="4" />
+        <form th:action="@{/post}" method="post">
+    <input type="hidden" name="nosandwich" value="4" />
     <button type="submit">Add</button>
+        <!-- <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="id" value="4" />
+    <button type="submit">Add</button> -->
 </form>
 
     </div>
@@ -75,9 +89,12 @@
         <img class="thumbnail" src="/images/images5.jpeg">
         <h3 class="card-label">sandwich</h3>
         <h4 th:text= "${produit5}"></h4>
-        <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="5" />
+        <form th:action="@{/post}" method="post">
+    <input type="hidden" name="nosandwich" value="5" />
     <button type="submit">Add</button>
+        <!-- <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="id" value="5" />
+    <button type="submit">Add</button> -->
 </form>
 
     </div>
@@ -86,9 +103,12 @@
         <img class="thumbnail" src="/images/images6.jpeg">
         <h3 class="card-label">sandwich</h3>
         <h4 th:text= "${produit6}"></h4>
-        <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="6" />
+        <form th:action="@{/post}" method="post">
+    <input type="hidden" name="nosandwich" value="6" />
     <button type="submit">Add</button>
+        <!-- <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="id" value="6" />
+    <button type="submit">Add</button> -->
 </form>
 
     </div>
@@ -97,9 +117,12 @@
         <img class="thumbnail" src="/images/images7.jpeg">
         <h3 class="card-label">sandwich</h3>
         <h4 th:text= "${produit7}"></h4>
-        <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="7" />
+        <form th:action="@{/post}" method="post">
+    <input type="hidden" name="nosandwich" value="7" />
     <button type="submit">Add</button>
+       <!--  <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="id" value="7" />
+    <button type="submit">Add</button> -->
 </form>
 
     </div>
@@ -109,8 +132,8 @@
         <h3 class="card-label">sandwich</h3>
         <h4 th:text= "${produit8}"></h4>
         
-        <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="8" />
+        <form th:action="@{/post}" method="post">
+    <input type="hidden" name="nosandwich" value="8" />
     <button type="submit">Add</button>
 </form>
         <!-- <form th:action="@{/delete}" method="post">
