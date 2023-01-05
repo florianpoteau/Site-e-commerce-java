@@ -64,6 +64,15 @@ public class ProduitController {
 		return "confirmation-page";
 	}
 	
+	@GetMapping ("/prix")
+	public String getPrix(@RequestParam("prix")int prix, Model model) {
+		List<DO_Sandwich> prixProduit = interface_sandwich.getByPrix(prix);
+		
+		
+		return "index";
+		
+	}
+	
 	
 	
 	

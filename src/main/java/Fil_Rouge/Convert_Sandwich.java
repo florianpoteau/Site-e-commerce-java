@@ -15,6 +15,7 @@ public interface Convert_Sandwich {
 		DO_Sandwich getById(long id);
 		public void deleteById (long id);
 		List<DO_Sandwich> getByNosandwich (int nosandwich);
+		List<DO_Sandwich> getByPrix (int prix);
 	}
 	
 	
