@@ -65,7 +65,7 @@ public class ProduitController {
 			return "error-page";
 		}
 		interface_sandwich.getByNosandwich(nosandwich);
-		model.addAttribute("message", "Le produit à été commandé avec succès.");
+		model.addAttribute("message", "Le produit à été commandé");
 		return "confirmation-page";
 	}
 	

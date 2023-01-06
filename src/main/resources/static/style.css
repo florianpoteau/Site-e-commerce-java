@@ -32,7 +32,19 @@ body {
     background-color:rgb(35, 31, 31);
     color: white;
   }
-  
+  .header-cart span {
+  background-color: orangered;
+  color: #fff;
+  position: absolute;
+  width: 24px;
+  height: 20px;
+  top: -5px;
+  right: -15px;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 6px;
+  border-radius:100%;
+}
   .menu{
     padding:10px;
     background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
@@ -47,12 +59,13 @@ body {
 /* css pour cadre de facturtion */
 
 .facturation{
+  position:sticky;
   border: #0d56f2 solid 4px;
   border-style: inset;
     margin-top: 8%;
   width: 600px;
   height: 100%;
-  background-color: rgb(241, 204, 190);
+  background-color: rgb(201, 201, 201);
 }
   .menu-header{
     text-align:center;
@@ -105,7 +118,7 @@ body {
   
   .price{
     color: antiquewhite;
-    font-size:12px;
+    font-size:14px;
     font-style: oblique;
     text-align:center;
   }
@@ -158,24 +171,16 @@ button {
   -webkit-box-shadow: 3px 3px 12px #444444;
   -moz-box-shadow: 3px 3px 12px #444444;
   }
-  footer{
-    color: #f5efef;
-    background-color: #1f497d;
-    display: flex;
-    justify-content: space-around;
-  }
-  .icon{
-    margin-top: -30px;
-    margin-left: 90%;
-  }
 
-    
-   
     footer{
-      color: #f5efef;
-      background-color: #1f497d;
+      background-attachment: fixed;
+      background-color: #6f41cb;
       display: flex;
       justify-content: space-around;
+
+    }
+    footer a {
+      color: #f0e9e9;
     }
     .icon{
       margin-top: -30px;
