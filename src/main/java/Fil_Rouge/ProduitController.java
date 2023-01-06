@@ -25,9 +25,5 @@ public class ProduitController {
         model.addAttribute("produits", produits);
         
         return "index";
-        
-      }
-	
-	
-
+        }
 }
