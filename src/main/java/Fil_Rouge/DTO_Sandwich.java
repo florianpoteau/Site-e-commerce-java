@@ -7,8 +7,6 @@ public class DTO_Sandwich {
 	private String produits;
 	private float prix;
 	
-	
-	
 	/**
 	 * @return the id
 	 */
@@ -58,8 +56,4 @@ public class DTO_Sandwich {
 		this.prix = prix;
 	}
 	
-	
-	
-	
-
 }
