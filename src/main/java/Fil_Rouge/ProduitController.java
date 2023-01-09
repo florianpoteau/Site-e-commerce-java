@@ -67,14 +67,15 @@ public class ProduitController {
 		interface_sandwich.getByNosandwich(nosandwich);
 		model.addAttribute("message", "Le produit à été commandé");
 		return "confirmation-page";
+
 	}
 	
 	@GetMapping ("/prix")
 	public String getPrix(@RequestParam("prix")int prix, Model model) {
 		List<DO_Sandwich> prixProduit = interface_sandwich.getByPrix(prix);
 		model.addAttribute("prixproduit", prixProduit);
-		return "index";
+		return "prixproduit";
 		
 	}	
-
-}
+	}
+	

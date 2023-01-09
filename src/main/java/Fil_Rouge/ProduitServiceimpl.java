@@ -67,12 +67,6 @@ import org.springframework.stereotype.Service;
 			 return produitDAO.findPrixSandwich(prix);
 			 
 		 }
-
-		
-
-		
-		 
-		 
 		 
 
 }
