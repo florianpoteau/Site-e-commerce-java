@@ -3,6 +3,7 @@
     <head>
     <meta charset="UTF-8">
     <title>Le roi des burger</title>
+    <link rel="shortcut icon" src="">
     <meta name="description" content="La description visible sur les moteurs de recherche">
     <link rel ="stylesheet" href="" th:href= "@{/style.css}">
     </head>
@@ -13,47 +14,53 @@
 <header>
 <nav-menu>
   <nav>
-    <img src="/images/Le chef des.png" width="70px">
+  
+ <blink>
+         <img src="/images/logo2.png" width="70px">
+ </blink>    
+ 
     <a href="#" class='nav-item'><span>accueil</span></a>
     <a href="#" class='nav-item'><span>Nos Sandwichs</span></a>
     <a href="#" class='nav-item'><span>Nos plats</span></a>
     <a href="#" class='nav-item'><span>Nos Contacts</span></a>
 
-    <div class ='icon'>
-    <img src="/images/shopping-cart-icon-psd-48299.jpg">
-    </div>
+    <div class="header-cart">
+         <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png">
+          <span>0</span>
+     </div>
 </nav-menu>
   </nav>
 </header>
 <main>
 <div class='menu'>
+<div class="fact">
   <section id="card-grid">
     <div class="card">
         <img class="thumbnail" src="/images/images8.jpeg">
         <h3 class="card-label">Sandwich salade tomate</h3>
          <h4 class= "price">2 , 5 €</h4>
-         <form th:action="@{/post}" method="post">
+         <!-- <form th:action="@{/post/id}" method="post">
     <input type="hidden" name="nosandwich" value="1" />
     <button type="submit">Add</button>
-    </form>
-         <!-- <form th:action="@{/delete}" method="post">
+    </form> -->
+          <form th:action="@{/delete}" method="post">
     <input type="hidden" name="id" value="1" />
     <button type="submit">Add</button>
-</form> -->
+</form> 
     </div>
     
     <div class="card">
         <img class="thumbnail" src="/images/images1.jpeg">
         <h3 class="card-label">Sandwich saumon crudité</h3>
         <h4 class= "price">2 , 98 €</h4>
-        <form th:action="@{/post}" method="post">
+        <!-- <form th:action="@{/post/id}" method="post">
     <input type="hidden" name="nosandwich" value="2" />
     <button type="submit">Add</button>
-    </form>
-        <!-- <form th:action="@{/delete}" method="post">
+    </form> -->
+         <form th:action="@{/delete}" method="post">
     <input type="hidden" name="nosandwich" value="2" />
     <button type="submit">Add</button>
-</form> -->
+</form> 
 
     </div>
     
@@ -61,12 +68,12 @@
         <img class="thumbnail" src="/images/images2.jpeg">
         <h3 class="card-label">croque surprise</h3>
         <h4 class= "price">3 , 15 €</h4>
-        <form th:action="@{/post}" method="post">
+        <!-- <form th:action="@{/post/id}" method="post">
     <input type="hidden" name="nosandwich" value="3" />
-    <button type="submit">Add</button>
-        <!-- <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="3" />
     <button type="submit">Add</button> -->
+        <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="id" value="3" />
+    <button type="submit">Add</button>
 </form>
 
     </div>
@@ -75,12 +82,12 @@
         <img class="thumbnail" src="/images/images3.jpeg">
         <h3 class="card-label">sandwich poulet mariné</h3>
         <h4 class= "price">2 , 40 €</h4>
-        <form th:action="@{/post}" method="post">
+        <!-- <form th:action="@{/post/id}" method="post">
     <input type="hidden" name="nosandwich" value="4" />
-    <button type="submit">Add</button>
-        <!-- <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="4" />
     <button type="submit">Add</button> -->
+        <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="id" value="4" />
+    <button type="submit">Add</button>
 </form>
 
     </div>
@@ -89,12 +96,12 @@
         <img class="thumbnail" src="/images/images5.jpeg">
         <h3 class="card-label">croque sandwich</h3>
         <h4 class= "price">2 , 30 €</h4>
-        <form th:action="@{/post}" method="post">
+       <!--  <form th:action="@{/post/id}" method="post">
     <input type="hidden" name="nosandwich" value="5" />
-    <button type="submit">Add</button>
-        <!-- <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="5" />
     <button type="submit">Add</button> -->
+         <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="id" value="5" />
+    <button type="submit">Add</button> 
 </form>
 
     </div>
@@ -103,12 +110,12 @@
         <img class="thumbnail" src="/images/images6.jpeg">
         <h3 class="card-label">sandwich salade tomate</h3>
         <h4 class= "price">3 , 20 €</h4>
-        <form th:action="@{/post}" method="post">
+        <!-- <form th:action="@{/post/id}" method="post">
     <input type="hidden" name="nosandwich" value="6" />
-    <button type="submit">Add</button>
-        <!-- <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="6" />
     <button type="submit">Add</button> -->
+        <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="id" value="6" />
+    <button type="submit">Add</button>
 </form>
 
     </div>
@@ -117,12 +124,12 @@
         <img class="thumbnail" src="/images/images7.jpeg">
         <h3 class="card-label">sandwich salade tomate</h3>
         <h4 class= "price">3 , 20 €</h4>
-        <form th:action="@{/post}" method="post">
+        <!-- <form th:action="@{/post/id}" method="post">
     <input type="hidden" name="nosandwich" value="7" />
-    <button type="submit">Add</button>
-       <!--  <form th:action="@{/delete}" method="post">
-    <input type="hidden" name="id" value="7" />
     <button type="submit">Add</button> -->
+         <form th:action="@{/delete}" method="post">
+    <input type="hidden" name="id" value="7" />
+    <button type="submit">Add</button> 
 </form>
 
     </div>
@@ -132,13 +139,21 @@
         <h3 class="card-label">burger steak cheddar crudité </h3>
         <h4 class= "price">7 , 50 €</h4>
         
-        <form th:action="@{/post}" method="post">
+        <!-- <form th:action="@{/post/id}" method="post">
     <input type="hidden" name="nosandwich" value="8" />
     <button type="submit">Add</button>
-</form>
-        <!-- <form th:action="@{/delete}" method="post">
-        <button type="submit" name="id">Add</button>
 </form> -->
+<form th:action="@{/delete}" method="post">
+        <button type="submit" name="id">Add</button>
+</form>
+
+ <!-- <div class="facturation">
+  <h2>Commandes</h2>
+  <p>sandwich : <button onclick="deleteProduct(1)">Supprimer</button></p>
+  <p>sandwich : <button onclick="deleteProduct(2)">Supprimer</button></p>
+  <p>sandwich : <button onclick="deleteProduct(3)">Supprimer</button></p>
+</div> -->
+            </section>
     </div>
    <div>
    <!-- <form th:action="@{/delete}" method="post" >
@@ -146,8 +161,9 @@
     <input type="number" name="id" required>
     <button type="submit">Supprimer</button>
 </form> -->
-</div>
 
+</div>
+ </div>
   </div>
 </main>
 <script  src ="java.js"></script>
@@ -159,4 +175,7 @@
     <h4>facebook</h4>
     <h4>instagram</h4>
 </footer>
+<script src="javascript.js">
+
+</script>
 </html>
