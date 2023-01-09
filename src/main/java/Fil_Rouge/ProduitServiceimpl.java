@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 	
 	@Service
@@ -62,11 +63,14 @@ import org.springframework.stereotype.Service;
 			 return produitDAO.findOneByNosandwich(nosandwich);
 		 }
 		 
-		 @Override
-		 public List<DO_Sandwich> getByPrix (int prix) {
-			 return produitDAO.findPrixSandwich(prix);
-			 
-		 }
+
+		
+
+		
+
+		
+		 
+		 
 		 
 
 }

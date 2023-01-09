@@ -49,7 +49,7 @@ public class ProduitController {
         return "index";
       }
 	
-	@PostMapping("/delete")
+	@PostMapping("/delete/id")
 	public String delete(@RequestParam("id")long id , Model model) {
 	    interface_sandwich.deleteById(id);
 	    model.addAttribute("message", "L'élément a été supprimé avec succès.");
@@ -65,17 +65,8 @@ public class ProduitController {
 		}
 		interface_sandwich.getByNosandwich(nosandwich);
 		model.addAttribute("message", "Le produit à été commandé avec succès.");
-		return "index";
+		return "confirmation-page";
 	}
 	
-	@GetMapping ("/prix")
-	public String getPrix(@RequestParam("prix")int prix, Model model) {
-		List<DO_Sandwich> prixProduit = interface_sandwich.getByPrix(prix);
-		model.addAttribute("prixproduit", prixProduit);
-		return "prixproduit";
-		
-	}
 	
-
-
 }
