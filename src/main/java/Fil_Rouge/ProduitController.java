@@ -47,7 +47,8 @@ public class ProduitController {
         DO_Sandwich produits8 = interface_sandwich.getById(8);
         model.addAttribute("produit8", produits8);
         return "index";
-      }
+        }
+      
 	
 	@PostMapping("/delete/id")
 	public String delete(@RequestParam("id")long id , Model model) {
@@ -67,6 +68,5 @@ public class ProduitController {
 		model.addAttribute("message", "Le produit à été commandé avec succès.");
 		return "confirmation-page";
 	}
-	
-	
 }
+
